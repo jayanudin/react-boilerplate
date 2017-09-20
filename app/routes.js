@@ -72,6 +72,24 @@ export default function createRoutes(store) {
         },
 
         {
+            path: '/data-thumbnail',
+            name: 'data-thumbnail',
+            getComponent(nextState, cb) {
+                const importModules = Promise.all([
+                    import('containers/DataThumbnail'),
+                ]);
+
+                const renderRoute = loadModule(cb);
+
+                importModules.then(([component]) => {
+                    renderRoute(component);
+                });
+
+                importModules.catch(errorLoading);
+            }
+        },
+
+        {
             path: '*',
             name: 'notfound',
             getComponent(nextState, cb) {

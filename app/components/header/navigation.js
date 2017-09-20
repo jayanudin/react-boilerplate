@@ -15,6 +15,7 @@ export default class MainNav extends Component {
 		        <li active={location.pathname == to}><Link to='/'>Home</Link></li>
 		        <li active={location.pathname == to}><Link to='/feature'>Feature</Link></li>
 		        <li active={location.pathname == to}><Link to='/post-featured'>Post Feature</Link></li>
+		        <li active={location.pathname == to}><Link to='/data-thumbnail'>Data Thumbnails</Link></li>
 		        <NavDropdown eventKey={3} title="Dropdown" id="basic-nav-dropdown">
 		          <MenuItem eventKey={3.1}>Action</MenuItem>
 		          <MenuItem eventKey={3.2}>Another action</MenuItem>
